@@ -1,11 +1,42 @@
 import React from "react";
 import News from "./components/News";
 
+const Scoring = ({ score }) => <p>Ocena: {score}</p>;
+
+const newsPosts = [
+	{
+		id: 1,
+		author: "Jan B.",
+		title: "Pilne: Co to był za dzień!",
+		intro: "Tego świat jeszcze nie widział",
+	},
+	{
+		id: 2,
+		author: "Krzysztof C.",
+		title: "Wszyscy zazdroszą Polakom!",
+		intro: "Takiego clickbajtowego tytułu jeszcze nikt nie wymyślił",
+	},
+	{
+		id: 3,
+		author: "Andrzej A.",
+		title: "Adam Małysz Zgolił wąs",
+		intro:
+			"Po przegranym zakładzie z Piotrem Żyłą nasz mistrz olimpijski zgolił wąsy",
+	},
+];
+
 function App() {
+	// console.log(newsPosts[0]);
 	return (
 		<div className='App'>
-			<p>dasdasdas</p>
-			<News id='12' title='dasdasdasds' intro='dasdas' />
+			{newsPosts.map(elem => (
+				<News
+					key={`newsKey_${elem.id}`}
+					title={elem.title}
+					intro={elem.intro}
+					author={elem.author}
+				/>
+			))}
 		</div>
 	);
 }
