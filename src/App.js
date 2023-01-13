@@ -1,7 +1,7 @@
 import React from "react";
 import News from "./components/News";
 
-const Scoring = ({ score }) => <p>Ocena: {score}</p>;
+
 
 const newsPosts = [
 	{
@@ -26,7 +26,6 @@ const newsPosts = [
 ];
 
 function App() {
-	// console.log(newsPosts[0]);
 	return (
 		<div className='App'>
 			{newsPosts.map(elem => (
