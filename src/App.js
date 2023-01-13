@@ -1,7 +1,5 @@
 import React from "react";
-import News from "./components/News";
-
-
+import News from "../src/articles/containers/News";
 
 const newsPosts = [
 	{
